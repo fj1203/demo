@@ -1,0 +1,87 @@
+@import '~iview/src/styles/index.less';
+
+@menu-dark-title: #464c5b;
+@menu-dark-active-bg: #464c5b;
+@layout-sider-background: #464c5b;
+
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.ivu-btn + .ivu-btn {
+    margin-left: 5px;
+}
+// iview样式覆盖 --start
+// Input[type=textarea]组件字体大小覆盖
+textarea.ivu-input {
+    font-size: 12px;
+}
+// Table header样式覆盖
+.ivu-table-title {
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+// Form包含设置了prop的FileUpload/MediaUpload，必填样式定义
+.ivu-form-item-error {
+    input[type=file] + .ivu-btn {
+        border: 1px solid #ed4014;
+    }
+    .media-upload > .add {
+        border: 1px dashed #ed4014;
+    }
+}
+// 搜索区域Form显示表单使用
+.self-form-search {
+    // .ivu-form-item {
+    //     margin-bottom: 16px;
+    // }
+    .ivu-date-picker {
+        display: block;
+    }
+}
+// Page组件样式覆盖
+.self-page {
+    margin-top: 20px;
+    text-align: center;
+    .ivu-page-total {
+        position: absolute;
+        margin-right: 16px;
+        right: 0;
+    }
+}
+// 使用Form组件单纯显示表单内容使用
+.self-form-show {
+    .ivu-form-item {
+        margin-bottom: 4px;
+    }
+}
+// 纯展示表格覆盖iview表格样式
+.self-table-show {
+    overflow-x: auto;
+    table {
+        width: 100%;
+        th, td {
+            padding: 0 16px;
+        }
+        th {
+            min-width: 160px;
+            width: 160px;
+        }
+        td {
+            min-width: 200px;
+            word-break: break-all;
+        }
+    }
+}
+
+// iview样式覆盖 --end
