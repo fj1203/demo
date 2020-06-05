@@ -1,6 +1,6 @@
 <template>
     <section class="add-card">
-        <div  class="content">
+        <div @click="clickHandle" class="content">
             <Icon size="24" type="ios-add-circle-outline" />
             <div class="new-text">Add New Card</div>
         </div>
@@ -15,14 +15,9 @@ export default {
         return {
         }
     },
-    props: {
-        title: {
-            type: String,
-            default: 'Cards'
-        },
-        gray: {
-            type: String,
-            default: 'View all cards'
+    methods: {
+        clickHandle () {
+            this.$emit('add')
         }
     }
 }
@@ -30,8 +25,10 @@ export default {
 
 <style lang="less" scoped>
 .add-card{
+    margin: 10px;
     display: flex;
-    width: 280px;
+    width: 30%;
+    max-width: 280px;
     height: 150px;
     justify-content: center;
     align-items: center;

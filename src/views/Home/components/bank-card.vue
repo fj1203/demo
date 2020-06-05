@@ -38,6 +38,7 @@ export default {
 
 <style lang="less" scoped>
 .back-card{
+    margin: 10px;
     width: 30%;
     max-width: 280px;
     height: 150px;

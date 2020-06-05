@@ -6,7 +6,7 @@
         <MyCard>
           <div class="my-card-content">
             <BankCard :data="item" v-for="(item, index) in bankList" :key="index"></BankCard>
-            <AddCard @click="addBank"></AddCard>
+            <AddCard @add="addBank"></AddCard>
           </div>
         </MyCard>
         <Row :gutter="40">
@@ -25,7 +25,7 @@
                   <Card class="icon-card">
                     <div>
                       <Icon size="35" color="#ff555e" type="ios-sunny-outline" />
-                      <div class="icon-text">Transactions</div>
+                      <div class="icon-text">Utillty</div>
                     </div>
                   </Card>
                 </Col>
@@ -34,16 +34,16 @@
                 <Col span="12">
                   <Card class="icon-card">
                     <div>
-                      <Icon size="35" color="#ff555e" type="ios-git-compare" />
-                      <div class="icon-text">Transactions</div>
+                      <Icon size="35" color="#ff555e" type="ios-medal-outline" />
+                      <div class="icon-text">Loans</div>
                     </div>
                   </Card>
                 </Col>
                 <Col span="12">
                   <Card class="icon-card">
                     <div>
-                      <Icon size="35" color="#ff555e" type="ios-sunny-outline" />
-                      <div class="icon-text">Transactions</div>
+                      <Icon size="35" color="#ff555e" type="ios-folder-outline" />
+                      <div class="icon-text">Deposits</div>
                     </div>
                   </Card>
                 </Col>
@@ -52,16 +52,16 @@
                 <Col span="12">
                   <Card class="icon-card">
                     <div>
-                      <Icon size="35" color="#ff555e" type="ios-git-compare" />
-                      <div class="icon-text">Transactions</div>
+                      <Icon size="35" color="#ff555e" type="ios-clock-outline" />
+                      <div class="icon-text">Fast transfer</div>
                     </div>
                   </Card>
                 </Col>
                 <Col span="12">
                   <Card class="icon-card">
                     <div>
-                      <Icon size="35" color="#ff555e" type="ios-sunny-outline" />
-                      <div class="icon-text">Transactions</div>
+                      <Icon size="35" color="#ff555e" type="ios-shuffle" />
+                      <div class="icon-text">Exchange</div>
                     </div>
                   </Card>
                 </Col>
@@ -245,7 +245,8 @@ export default {
 }
 .my-card-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap
 }
 .header-img {
   width: 40px;
